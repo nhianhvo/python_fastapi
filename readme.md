@@ -86,3 +86,36 @@ my_fastapi_project/
 ├── venv/
 ├── .gitignore
 └── requirements.txt
+
+Mở python shell 
+python
+
+tắt python shell
+exit()/Control + D
+
+
+
+Authentication
+Cài đặt thư viện cần thiết:
+Cài đặt python-jose để tạo và xác minh JWT:
+    pip install "python-jose[cryptography]"
+- Cài đặt passlib để băm mật khẩu:
+     pip install "passlib[bcrypt]"
+2. Tạo mô hình dữ liệu:
+Tạo file app/models.py để định nghĩa mô hình dữ liệu:
+Tạo service cho authentication:
+Tạo file app/services/auth_service.py:
+encoded_jwt
+4. Tạo router cho authentication:
+Tạo file app/routers/auth.py:
+
+5. Tích hợp router vào ứng dụng chính:
+Trong app/main.py, thêm router cho authentication:
+
+6. Chạy ứng dụng:
+Chạy ứng dụng của bạn với lệnh:
+reload
+7. Truy cập Swagger UI:
+Mở trình duyệt và truy cập http://localhost:8000/docs
+Bạn sẽ thấy endpoint /token để thực hiện đăng nhập và nhận token.
+Với cấu trúc này, bạn có thể mở rộng thêm các chức năng khác cho authentication như đăng ký, xác thực token, v.v.
